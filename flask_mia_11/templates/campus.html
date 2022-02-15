@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}campus{% endblock %}
+
+{% block content %}
+    <div class="container pt-5">
+        <div class="container-sm px-sm-3 col-sm-5">
+            <h1>list of campus</h1>
+            <br>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
+              <button type="button" class="btn btn-success" href="#" data-bs-toggle="modal" data-bs-target="#campus">New campus</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="campus" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add new campus</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form action='add_campus' method='GET'>
+                              <label class="form-label">Name</label>
+                              <input class="form-control" type='text' name='campus' required>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type='submit' class="btn btn-primary">Save</button>
+                              </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <table class="table table-striped col-md-4">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col"></th>
+
+                </tr>
+              </thead>
+              <tbody>
+              {% for campus in campus %}
+                <tr>
+                  <td>{{ campus[1] }}</td>
+
+                      <td>
+                          <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
+                              <a type="button" class="btn btn-danger" href="/delete_campus/{{ campus[0] }}">Remove</a>
+                              <button type="button" class="btn btn-success" href="#" data-bs-toggle="modal" data-bs-target="#campus_edit" data-bs-whatever="{{ campus[0] }}">Modify</button>
+                          </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="campus_edit" tabindex="-1" aria-labelledby="campus_header" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="campus_header">Edit a campus</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+
+                            <form action='edit_campus'>
+                              <div class="modal-body">
+                                  <input class="form-control" type="hidden" name="_id" >
+                                  <label class="form-label">Name</label>
+                                  <input class="form-control" type='text' name='campus' placeholder="">
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type='submit' class="btn btn-primary">Save</button>
+                                  </div>
+                              </div>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

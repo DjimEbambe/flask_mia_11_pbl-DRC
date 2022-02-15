@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% block title %}Global Mobility Survey{% endblock %}
+{% block content %}
+    <div id="myCarousel" class="carousel slide container dar pt-5 dark" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner bg">
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+            <img src="{{ url_for('static', filename='campus/batiment_kinshasa.jpg') }}" class="d-block w-100" alt="...">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Kinshasa campus</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+            <img src="{{ url_for('static', filename='campus/Nantes_campus.jpg') }}" class="d-block w-100" alt="...">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Nantes campus</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+            <img src="{{ url_for('static', filename='campus/Bretagne_campus.jpg') }}" class="d-block w-100" alt="...">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Bretagne_campus</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+            <img src="{{ url_for('static', filename='campus/Kinshasa_campus.png') }}" class="d-block w-100" alt="...">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Kinshasa_campus</h1>
+              </div>
+            </div>
+          </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                <img src="{{ url_for('static', filename='campus/Lille_campus.jpg') }}" class="d-block w-100" alt="...">
+                <div class="container">
+                  <div class="carousel-caption text-start">
+                    <h1>Lille_campus</h1>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                <img src="{{ url_for('static', filename='campus/Toulouse_campus.jpg') }}" class="d-block w-100" alt="...">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Toulouse_campus</h1>
+                  </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                <img src="{{ url_for('static', filename='campus/UCAC-ICAM-Campus.jpg') }}" class="d-block w-100" alt="...">
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>UCAC-ICAM-Campus</h1>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <div class="container-sm px-5 col-md-4" style="">
+        <h1>Global Mobility Survey</h1>
+        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
+              <button type="button" class="btn btn-success" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">New mobility survey</button>
+        </div>
+        <table class="table px-5 table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Student mail</th>
+              <th scope="col">Campus</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for mobility in mobilityWish %}
+                <tr>
+                  <th scope="row">{{ mobility[0] }}</th>
+                  <td>{{ mobility[1] }}</td>
+                  <td>{{ mobility[2] }}</td>
+                  <td>
+                      <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
+                              <a type="button" class="btn btn-danger" href="/delete_mobility/{{ mobility[0] }}">Remove</a>
+                              <button type="button" class="btn btn-success" href="#" data-bs-toggle="modal" data-bs-target="#campus_edit" data-bs-whatever="{{ mobility[0] }}">Modify</button>
+                          </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="campus_edit" tabindex="-1" aria-labelledby="campus_header" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="campus_header">Edit a campus</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+
+                            <form action='edit_mobility'>
+                              <div class="modal-body">
+                                  <input class="form-control" type="hidden" name="_id" >
+
+                                  <label class="form-label">Email address</label>
+                                  <input class="form-control" type='email' name='email' required placeholder="name@example.com">
+                                  <br>
+
+                                  <label class="form-label">Campus choice</label>
+                                  <select name='campus'>
+                                      {% for campus in campus %}
+                                          <option value=" {{ campus[0] }} ">
+                                              {{ campus[1] }}
+                                          </option>
+                                      {% endfor %}
+                                  </select>
+
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type='submit' class="btn btn-primary">Save</button>
+                                  </div>
+                              </div>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add new mobility survey</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form action='add_mobility' method='GET'>
+                          <label class="form-label">Email address</label>
+                          <input class="form-control" type='email' name='student' required placeholder="name@example.com">
+                          <br>
+
+                          <label class="form-label">Campus choice</label>
+                          <select name='choice'>
+                              {% for campus in campus %}
+                                  <option value=" {{ campus[0] }} ">
+                                      {{ campus[1] }}
+                                  </option>
+                              {% endfor %}
+                          </select>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type='submit' class="btn btn-primary">Save</button>
+                          </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+{% endblock %}

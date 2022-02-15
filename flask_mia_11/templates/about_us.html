@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% block title %}campus{% endblock %}
+
+{% block content %}
+
+    <!--====== BANNER PART START ======-->
+	<section class="banner-area bg_cover">
+		<div class="container container-sm">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="banner-content">
+						<h1 class="text-white">About Us</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--====== BANNER PART END ======-->
+
+
+	<!--======  START RESTAURANT ======-->
+	<div class="container container-sm p-3 col-8">
+		<div id="carouselExampleCaptions" class="carousel slide m-3" data-bs-ride="carousel">
+		  <div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		  </div>
+		  <div class="carousel-inner">
+			<div class="carousel-item active">
+			  <img src="{{ url_for('static', filename='cantine/IMG-4249.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our Restaurant</h5>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='cantine/IMG-4250.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our Restaurant</h5>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='cantine/IMG-4251.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our Restaurant</h5>
+			  </div>
+			</div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+		<div class="row m-5" >
+			<div class="col-4">
+				<img src="{{ url_for('static', filename='cantine/IMG-4249.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-4">
+				<img src="{{ url_for('static', filename='cantine/IMG-4250.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-4">
+				<img src="{{ url_for('static', filename='cantine/IMG-4251.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+		</div>
+	</div>
+	<!--====== END RESTAURANT ======-->
+
+	<hr>
+	<!--======  START FABLAB AND NEW BUILDING ======-->
+	<div class="container container-sm p-3 col-8">
+		<div id="fablab" class="carousel slide m-3" data-bs-ride="carousel">
+		  <div class="carousel-indicators">
+			<button type="button" data-bs-target="#fablab" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#fablab" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#fablab" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		  </div>
+		  <div class="carousel-inner">
+			<div class="carousel-item active">
+			  <img src="{{ url_for('static', filename='Fablab/IMG-4241.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our FabLab and new building</h5>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='Fablab/IMG-4243.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our FabLab and new building</h5>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='Fablab/IMG-4243.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our FabLab and new building</h5>
+			  </div>
+			</div>
+		    <div class="carousel-item">
+			  <img src="{{ url_for('static', filename='Fablab/IMG-4248.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our FabLab and new building</h5>
+			  </div>
+			</div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#fablab" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#fablab" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+		<div class="row m-5" >
+			<div class="col-3">
+				<img src="{{ url_for('static', filename='Fablab/IMG-4241.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-3">
+				<img src="{{ url_for('static', filename='Fablab/IMG-4243.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-3">
+				<img src="{{ url_for('static', filename='Fablab/IMG-4244.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-3">
+				<img src="{{ url_for('static', filename='Fablab/IMG-4248.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+		</div>
+	</div>
+	<!--====== END FABLAB AND NEW BUILDING ======-->
+	<hr>
+	<!--======  START THINKS TO DO IN KINSHASA ======-->
+	<div class="container container-sm p-3 col-8">
+		<div id="kin" class="carousel slide m-3" data-bs-ride="carousel">
+		  <div class="carousel-indicators">
+			<button type="button" data-bs-target="#kin" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#kin" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#kin" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		    <button type="button" data-bs-target="#kin" data-bs-slide-to="3" aria-label="Slide 4"></button>
+			<button type="button" data-bs-target="#kin" data-bs-slide-to="4" aria-label="Slide 5"></button>
+		  </div>
+		  <div class="carousel-inner">
+			<div class="carousel-item active">
+			  <img src="{{ url_for('static', filename='culture/MOBUTU.png') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Home of MOBUTU's president </h5>
+			  </div>
+			</div>
+		    <div class="carousel-item">
+			  <img src="{{ url_for('static', filename='culture/e.jpeg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Interchange tower </h5>
+			  </div>
+			</div>
+		  	<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='culture/ppp.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Palais du peuple </h5>
+			  </div>
+			</div>
+		  	<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='culture/mm.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Martyr stadium </h5>
+			  </div>
+			</div>
+		    <div class="carousel-item">
+			  <img src="{{ url_for('static', filename='culture/meu1.jpg') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Museum </h5>
+			  </div>
+			</div>
+
+		    <div class="carousel-item">
+			  <img src="{{ url_for('static', filename='culture/BONOBO.png') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Lola Bonobo</h5>
+			  </div>
+			</div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#kin" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#kin" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+		<div class="row m-5" >
+			<div class="col-2">
+				<img src="{{ url_for('static', filename='culture/MOBUTU.png') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-2">
+				<img src="{{ url_for('static', filename='culture/e.jpeg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-2">
+				<img src="{{ url_for('static', filename='culture/meu1.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-2">
+				<img src="{{ url_for('static', filename='culture/BONOBO.png') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-2">
+				<img src="{{ url_for('static', filename='culture/mm.jpg') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<!--====== END THINKS TO DO IN KINSHASA ======-->
+
+
+	<!--======  START Food ======-->
+	<div class="container container-sm p-3 col-8">
+		<div id="FOOD" class="carousel slide m-3" data-bs-ride="carousel">
+		  <div class="carousel-indicators">
+			<button type="button" data-bs-target="#FOOD" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#FOOD" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		  </div>
+		  <div class="carousel-inner">
+			<div class="carousel-item active">
+			  <img src="{{ url_for('static', filename='culture/mosaka.png') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our FabLab and new building</h5>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <img src="{{ url_for('static', filename='culture/liboke.png') }}" class="d-block w-100" alt="...">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>Our FabLab and new building</h5>
+			  </div>
+			</div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#FOOD" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#FOOD" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+		<div class="row m-5" >
+			<div class="col-6">
+				<img src="{{ url_for('static', filename='culture/liboke.png') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+			<div class="col-6">
+				<img src="{{ url_for('static', filename='culture/mosaka.png') }}" class="d-block w-100" alt="..." style="height: 170px">
+			</div>
+		</div>
+	</div>
+	<!--====== END Food ======-->
+{% endblock %}
